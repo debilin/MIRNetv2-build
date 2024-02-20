@@ -27,4 +27,5 @@ RUN apt-get clean && \
         /var/tmp/*
 
 # Set an entrypoint to the main enhance.py script
-ENTRYPOINT ["/bin/bash"]
+COPY entrypoint.sh /usr/bin
+ENTRYPOINT ["entrypoint.sh"]
